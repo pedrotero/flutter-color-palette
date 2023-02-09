@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../utils/color_utils.dart';
@@ -17,5 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const ColorSelectionPage(),
     );
+  }
+
+  void updatePrimarySwatchColor(String value) {
+    print(GetMaterialApp(
+      theme: ThemeData(primarySwatch: ColorUtils.CreateMaterialColor(value)),
+    ));
   }
 }
